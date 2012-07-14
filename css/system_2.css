@@ -1,0 +1,406 @@
+@charset "utf-8";
+
+
+/* Change default html styles */
+* {  margin: 0;  padding: 0; }
+
+a{ text-decoration:none; color:#269; font-weight:bold; }
+a:hover{ text-decoration:underline; }
+
+img { border: none; }
+a img { border-style: none; }
+
+p{ margin:0; line-height:1.5em; }
+
+h1,h2,h3,h4{ margin:0; padding:0; font-weight:normal; }
+
+h1{ font-size:3.2em; letter-spacing:0;}
+h1 a:hover{ text-decoration:none; }
+h2{ font-size:1.6em; letter-spacing:-1px;  color:#888; }
+h3{ color: #555; font-size:1.4em; margin:1em 0 0.5em 0.5em; }
+h4{ font-size:1.2em; font-weight:bold; }
+
+
+/* Body Styles */
+body{
+	margin:0;
+	padding:0;
+	font:76% tahoma,verdana,sans-serif;
+	background:#c8c8c8 url(../images/bodybg.png) repeat-x;
+	color:#333;
+	text-align:center;
+}
+
+#container{
+	width:1015px;
+	min-width:1015px !important;
+	padding:0 10px;
+	margin:0 auto 35px auto;
+	*background:#f5f5f5 url("../images/contentbg.png") repeat-x;
+	background:url("../images/contentbg-img.png") 100% 100% no-repeat, #f5f5f5 url("../images/contentbg.png") repeat-x;
+	color:#333;
+	text-align:left;
+	border-left:1px solid #eef;
+	border-right:1px solid #eef;
+
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-moz-border-radius-bottomright: 8px;
+	 border-bottom-left-radius: 8px;
+	 border-bottom-right-radius: 8px;
+	 
+	-moz-box-shadow:0 10px 20px rgba(68,68,68,0.5);
+	-webkit-box-shadow:0 10px 20px rgba(68,68,68,0.5);
+	box-shadow:0 10px 20px rgba(68,68,68,0.5);
+
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+	zoom: 1;
+}
+
+#sitetitle{
+	float:left;
+	height:112px;
+	margin:0 0 0 0;
+	background: url(../images/) no-repeat; /* Delete this line to remove the animated globe */
+	width:62%;
+	color:#333;
+}
+#sitetitle div.logo{
+	float:left;
+	display:block;
+	width:72px;
+	height:98px;
+	margin:7px 0 0 0;
+	background:url(../images/logo.png) no-repeat;
+}
+#sitetitle h1{ margin:20px 0 5px 85px; font-weight:bold; color:#135490; }
+#sitetitle h2{ margin:-10px 0 0 86px; font-weight:normal; color:#444; }
+
+#sitetitle a{ }
+#sitetitle a:hover{ color:#333333; }
+
+/* Profile Info Area start */
+#profileinfo{
+	height:112px;
+	text-align: right;
+	background: url(../images/profileinfo-bg.png) 60% -1px no-repeat;
+}
+#profileinfo h1{
+	font-size:11px;
+	font-weight:bold;
+	color:#111;
+	position:relative;
+	top:22px;
+}
+.log-image{
+	float:right;
+	width:70px;
+	height:70px;
+	margin:0px 0 0 5px;
+	background-color:#e3e3e3;
+
+		border:1px solid #888;
+		behavior: url(../css/border-radius.htc);
+		-moz-border-radius:8px;
+		-webkit-border-radius:8px;
+		-khtml-border-radius:8px;
+		border-radius:8px 8px;
+}
+
+.sideBox{
+	float:right;
+}
+.log-txt{
+	font-size:11px;
+	text-align:right;
+	line-height:1.4;
+	width:300px;
+	color:000000;
+	position:relative;
+	top:25px;
+}
+
+/* Managing Links start */
+.managing{
+	float:right;
+	position:relative;
+	top:14px; right:90px;
+	width:370px;
+	clear:right;
+}
+.managing ul{ list-style:none;}
+
+.managing ul li{
+	display:inline;
+}
+.managing ul li a{
+  font-size:12px;
+  color:#e5e5e5;
+  font-weight:normal;
+  background-color:#0066CC;
+  padding:15px 10px 15px 10px;
+  margin:0 0 0 0;
+
+  border:2px #4f4f4f solid;
+	-webkit-border-bottom-left-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	-moz-border-radius-bottomright: 6px;
+	 border-bottom-left-radius: 6px;
+	 border-bottom-right-radius: 6px;
+}
+/* Managing Links end */
+/* Profile Info Area end */
+
+/* Search area start */
+#search{
+	height:45px;
+	text-align:left;
+	background-color:;
+}
+.form-sect-1{ float:left; margin:0 10px 0 0; display:inline;}
+
+.form-sect-2{ float:right; margin:0 0 0 0; display:inline;}
+
+span.customStyleSelectBox{
+	margin:6px -2px 0 0;
+	font-size:13px;
+	background-color: #f4f4f4;
+	color:#333;
+	padding:6px 7px 7px 7px;
+	border:2px solid #555;
+	
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px 7px;
+}
+span.customStyleSelectBox.changed{ background-color:#fbcd6a; color:#000;}
+.customStyleSelectBoxInner{ background:url(../images/canvas-list-nav-item-arrow.gif) no-repeat center right; }
+
+.textbox-styling{
+	margin:8px 0 0 0;
+	font-size:13px;
+	background-color: #ffffff;
+	height:18px;
+	color:#333;
+	padding:5px 7px 6px 7px;
+	border:0 solid #555;
+	
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px 7px;
+
+	-moz-box-shadow:0 10px 10px rgba(68,68,68,0.5);
+	-webkit-box-shadow:0 10px 10px rgba(68,68,68,0.5);
+	box-shadow:0 0px 10px rgba(68,68,68,0.6);
+
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+	zoom: 1;
+}
+
+.s-btn1{
+	position:relative;
+	top:-9px; left:-2px;
+	width:35px;
+	height:35px;
+	margin:0 0 0 0;
+	border:none;
+	cursor:pointer;
+	background: url(../images/search-icn-1.png) 0 0 no-repeat;
+}
+.s-btn1:hover{ background: url(../images/search-icn-2.png) 0 0 no-repeat; }
+
+.s-btn2{
+	position:relative;
+	top:-9px; right:2px;
+	width:35px;
+	height:35px;
+	margin:0 0 0 0;
+	border:none;
+	cursor:pointer;
+	background: url(../images/search-icn-1.png) 0 0 no-repeat;
+}
+.s-btn2:hover{ background: url(../images/search-icn-2.png) 0 0 no-repeat; }
+
+/* Search area end */
+
+
+#content{
+	margin-top:20px;
+	clear:both;
+	background: url(../images/globebottom.gif) 0 100% no-repeat;
+}
+
+#content h2{
+	margin:0 0 10px 0;
+	color:#555;
+	font-size:30px;
+	border-bottom:2px solid #999;
+}
+#content h2 a{ color:#555; font-weight:normal; }
+#content h2 a:hover{
+	color:#269;
+	text-decoration:none;
+	background:none;
+}
+#content p{ margin:0.5em 1em 0.8em 1em; }
+
+#left{
+	float:left;
+	width:250px;
+	min-height:450px;  
+    height:auto !important;  
+    height:450px;
+	margin:0 0 30px 0;
+	/*
+	border:2px solid #fff;
+	background:#e9e9e9 url(../images/left-bg.png) 0 0 repeat-x;
+
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;
+	 border-top-left-radius: 8px;
+	 border-top-right-radius: 8px;
+	 */
+}
+#left h2{
+	font-size:23px;
+	border-bottom:none;
+	color:#039;
+}
+
+#left p{
+	float:left;
+	font-size:12px;
+	text-align:justify;
+}
+
+#mid-cont{
+	float:left;
+	min-width:755px !important;
+	width:755px;
+	margin-left:10px;
+	margin-right:0;
+}
+
+
+.entry{
+	width:710px;
+	float:left;
+	position:relative;
+	margin:0 0 20px 0;
+	border:2px solid #fff;
+	background:#eee url(../images/entrybg.png) repeat-x;
+	color:#333;
+	padding:15px 20px 0 20px;
+
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;
+	 border-top-left-radius: 8px;
+	 border-top-right-radius: 8px;
+}
+#entry{ display:block; background:url(../images/ambuluwawa.png) 98% 40px no-repeat;}
+
+.list-block1{
+	float:left;
+	margin:10px 0 0 0;
+	
+}
+.list-block1 li{
+	list-style:circle;
+	position:relative;
+	left:20px;
+	margin:0 0 10px 0;
+	
+}
+.gampolamap{
+	float:left;
+	margin-right:0;
+	border:2px solid #039;
+}
+
+.entry a:hover, .intro a:hover{
+	text-decoration:none;
+	padding-bottom:2px;
+	background:url(../images/flash2.gif) bottom left repeat-x; /* Delete this line to remove the flashing underline for regular links */
+}
+
+.link{
+	color:#269;
+	background:url(../images/linkarrow.gif) left no-repeat;
+	display:block;
+	margin:4px 0 0 0;
+	padding:2px 1em;
+}
+
+.link:hover{
+	color:#48b;
+	background:url(../images/blinkarrow.gif) left no-repeat; /* Delete this line to remove the blinking arrows by the links */
+	text-decoration:none;
+}
+.thumbs img{
+	position:relative;
+	padding:3px;
+	margin:0 2px 2px 0;
+	border:1px solid #fff;
+	background-color:#ddd;
+	color: #555;
+}
+
+.thumbs img:hover{
+	background: url(../images/flash.gif); /* Delete this line to remove the blinkingblue frame around the thumbnails */
+}
+
+.entryphoto{
+	margin:5px 10px 10px 0;
+	float:left;
+	padding:3px;
+	border:1px solid #fff;
+	background-color:#ddd;
+	color:#333;
+}
+
+.meta{
+	clear:both;
+	border-top: 2px solid #ccc;
+	padding: 5px 1px 0 0;
+	margin:10px 0 0 0;
+	text-align:right;
+	font-size:0.9em;
+	color: #567;
+}
+
+.pagenav{ color: #888; text-align:center; }
+.entry img{ position:relative; }
+.subcontainer { width:98%; }
+.rightsub{ float:left; width:45%; }
+.rightsub2{ margin-left:51%; }
+
+.date{ float:left; font-weight:bold; }
+.right{ text-align:right; }
+.center{ text-align:center; }
+.clear{ clear:both; }
+.hide{ display:none; }
+
+/* footer start */
+#footer{
+	clear:both;
+	padding:10px 0 12px 24px;
+	text-align:left;
+	color:#888;
+}
+
+#footer a{ color:#888; font-weight:normal; }
+
+#footer span{
+	color:#aaa;
+	font-size:2em;
+	letter-spacing:-2px;
+}
+/* footer end */

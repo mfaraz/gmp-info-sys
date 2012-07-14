@@ -1,0 +1,10 @@
+/* CSS Document */
+#logo	{
+	float: left;
+	height: 45px;
+	margin: 50px 0 0 0;
+	padding: 25px 0 0 15px;
+	font-family: "Iskolapotha";
+	font-size: 50px;
+	color: #000000;
+}
