@@ -10,7 +10,7 @@ class Editorfck
          
         $editor = new FCKeditor($name); 
         // set variables
-        $editor->BasePath   = 'http://explorersrilanka.indisil.com/plugins/fckeditor/' ;
+        $editor->BasePath   = 'http://localhost/gmpinfosys/plugins/fckeditor/' ;
         
         //$editor->ToolbarSet = empty($attribs['ToolbarSet']) ? 'Basic' : $attribs['ToolbarSet']; 
         $editor->ToolbarSet = 'Basic';

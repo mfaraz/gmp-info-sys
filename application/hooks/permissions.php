@@ -2,103 +2,77 @@
 $doesNotRequireLogin = array();
 $permissions = array();
 $doesNotRequireLogin['admin']['index'] = true;
-$doesNotRequireLogin['admin']['logout'] = true;
-$doesNotRequireLogin['unauthorized']['index'] = true;
-$doesNotRequireLogin['admin']['admin_area'] = true;
 $doesNotRequireLogin['admin']['home'] = true;
+$doesNotRequireLogin['admin']['logout'] = true;
+$doesNotRequireLogin['admin']['admin_area'] = true;
+$doesNotRequireLogin['unauthorized']['index'] = true;
+
 /*--------------------------------------------------- start admin permissions----------------------------**/
 /****************hotel module******************************/
-$permissions['admin']['hotel']['hotellist'] = true;
-$permissions['admin']['hotel']['index'] = true;
-$permissions['admin']['hotel']['addhotel'] = true;
-$permissions['admin']['hotel']['edithotel'] = true;
-$permissions['admin']['hotel']['updatehotel'] = true;
-$permissions['admin']['hotel']['delhotel'] = true;
-$permissions['admin']['hotel']['getcity'] = true;
-$permissions['admin']['hotelcontent']['index'] = true;
-$permissions['admin']['hotelcontent']['savehotelcontent'] = true;
-$permissions['admin']['hotelcontent']['savehotelimages'] = true;
-$permissions['admin']['hotelroomtype']['index'] = true;
-$permissions['admin']['hotelroomtype']['addroomtype'] = true;
-$permissions['admin']['hotelroomtype']['roomtypelist'] = true;
-$permissions['admin']['hotelroomtype']['roomtypeedit'] = true;
-$permissions['admin']['hotelroomtype']['doeditroomtype'] = true;
-$permissions['admin']['hotelroomtype']['roomtypedelete'] = true;
+$permissions['admin']['admin']['getbranches'] = true;
+$permissions['admin']['admin']['getorgdetails'] = true;
 
+$permissions['admin']['zone']['index'] = true;
+$permissions['admin']['zone']['addzone'] = true;
+$permissions['admin']['zone']['doaddzone'] = true;
+$permissions['admin']['zone']['editzone'] = true;
+$permissions['admin']['zone']['doeditzone'] = true;
+$permissions['admin']['zone']['deletezone'] = true;
 
-/****************facility module******************************/
-$permissions['admin']['facility']['faciltylist'] = true;
-$permissions['admin']['facility']['index'] = true;
-$permissions['admin']['facility']['addfac'] = true;
-$permissions['admin']['facility']['faciltyedit'] = true;
-$permissions['admin']['facility']['doeditfacility'] = true;
-$permissions['admin']['facility']['facilitydelete'] = true;
+$permissions['admin']['branch']['index'] = true;
+$permissions['admin']['branch']['addbranch'] = true;
+$permissions['admin']['branch']['doaddbranch'] = true;
+$permissions['admin']['branch']['editbranch'] = true;
+$permissions['admin']['branch']['getzonesbydivs'] = true;
+$permissions['admin']['branch']['getbranchbyzone'] = true;
+$permissions['admin']['branch']['getorgbybranch'] = true;
 
-/****************Accomodation module******************************/
-$permissions['admin']['accomodation']['accomodationlist'] = true;
-$permissions['admin']['accomodation']['addaccomodation'] = true;
-$permissions['admin']['accomodation']['doaddaccomodation'] = true;
-$permissions['admin']['accomodation']['accomodationedit'] = true;
-$permissions['admin']['accomodation']['doeditacomdation'] = true;
-$permissions['admin']['accomodation']['accomodationdelete'] = true;
+$permissions['admin']['organization']['index'] = true;
+$permissions['admin']['organization']['addorganization'] = true;
+$permissions['admin']['organization']['doaddorganization'] = true;
+$permissions['admin']['organization']['addmember'] = true;
+$permissions['admin']['organization']['doaddmember'] = true;
+$permissions['admin']['organization']['addreligiousorg'] = true;
+$permissions['admin']['organization']['doaddreligiousorg'] = true;
 
-/****************Meal plan module******************************/
-$permissions['admin']['mealplan']['index'] = true;
-$permissions['admin']['mealplan']['addmealplan'] = true;
-$permissions['admin']['mealplan']['doaddmealplan'] = true;
-$permissions['admin']['mealplan']['mealplanedit'] = true;
-$permissions['admin']['mealplan']['doeditmealplan'] = true;
-$permissions['admin']['mealplan']['mealplandelete'] = true;
-
+/****************Language module******************************/
+$permissions['admin']['language']['index'] = true;
+$permissions['admin']['language']['editlabel'] = true;
+$permissions['admin']['language']['updatelabel'] = true;
 /*--------------------------------------------------- end admin permissions----------------------------**/
 
 /*--------------------------------------------------- start Super-superadmin permissions----------------------------**/
 /****************hotel module******************************/
-$permissions['superadmin']['hotel']['hotellist'] = true;
-$permissions['superadmin']['hotel']['index'] = true;
-$permissions['superadmin']['hotel']['addhotel'] = true;
-$permissions['superadmin']['hotel']['edithotel'] = true;
-$permissions['superadmin']['hotel']['updatehotel'] = true;
-$permissions['superadmin']['hotel']['delhotel'] = true;
-$permissions['superadmin']['hotel']['getcity'] = true;
-$permissions['superadmin']['hotelcontent']['index'] = true;
-$permissions['superadmin']['hotelcontent']['savehotelcontent'] = true;
-$permissions['superadmin']['hotelcontent']['savehotelimages'] = true;
-$permissions['superadmin']['hotelroomtype']['index'] = true;
-$permissions['superadmin']['hotelroomtype']['addroomtype'] = true;
-$permissions['superadmin']['hotelroomtype']['roomtypelist'] = true;
-$permissions['superadmin']['hotelroomtype']['roomtypeedit'] = true;
-$permissions['superadmin']['hotelroomtype']['doeditroomtype'] = true;
-$permissions['superadmin']['hotelroomtype']['roomtypedelete'] = true;
-$permissions['superadmin']['hotelcontent']['deletehotelimage'] = true;
+$permissions['superadmin']['admin']['getbranches'] = true;
+$permissions['superadmin']['admin']['getorgdetails'] = true;
 
+$permissions['superadmin']['zone']['index'] = true;
+$permissions['superadmin']['zone']['addzone'] = true;
+$permissions['superadmin']['zone']['doaddzone'] = true;
+$permissions['superadmin']['zone']['editzone'] = true;
+$permissions['superadmin']['zone']['doeditzone'] = true;
+$permissions['superadmin']['zone']['deletezone'] = true;
 
-/****************facility module******************************/
-$permissions['superadmin']['facility']['faciltylist'] = true;
-$permissions['superadmin']['facility']['index'] = true;
-$permissions['superadmin']['facility']['addfac'] = true;
-//$permissions['superadmin']['facility']['facilityedit'] = true;
-$permissions['superadmin']['facility']['faciltyedit'] = true;
-$permissions['superadmin']['facility']['doeditfacility'] = true;
-$permissions['superadmin']['facility']['facilitydelete'] = true;
+$permissions['superadmin']['branch']['index'] = true;
+$permissions['superadmin']['branch']['addbranch'] = true;
+$permissions['superadmin']['branch']['doaddbranch'] = true;
+$permissions['superadmin']['branch']['editbranch'] = true;
+$permissions['superadmin']['branch']['getzonesbydivs'] = true;
+$permissions['superadmin']['branch']['getbranchbyzone'] = true;
+$permissions['superadmin']['branch']['getorgbybranch'] = true;
 
+$permissions['superadmin']['organization']['index'] = true;
+$permissions['superadmin']['organization']['addorganization'] = true;
+$permissions['superadmin']['organization']['doaddorganization'] = true;
+$permissions['superadmin']['organization']['addmember'] = true;
+$permissions['superadmin']['organization']['doaddmember'] = true;
+$permissions['superadmin']['organization']['addreligiousorg'] = true;
+$permissions['superadmin']['organization']['doaddreligiousorg'] = true;
 
-/****************Accomodation module******************************/
-$permissions['superadmin']['accomodation']['accomodationlist'] = true;
-$permissions['superadmin']['accomodation']['addaccomodation'] = true;
-$permissions['superadmin']['accomodation']['doaddaccomodation'] = true;
-$permissions['superadmin']['accomodation']['accomodationedit'] = true;
-$permissions['superadmin']['accomodation']['doeditacomdation'] = true;
-$permissions['superadmin']['accomodation']['accomodationdelete'] = true;
-
-/****************Meal plan module******************************/
-$permissions['superadmin']['mealplan']['index'] = true;
-$permissions['superadmin']['mealplan']['addmealplan'] = true;
-$permissions['superadmin']['mealplan']['doaddmealplan'] = true;
-$permissions['superadmin']['mealplan']['mealplanedit'] = true;
-$permissions['superadmin']['mealplan']['doeditmealplan'] = true;
-$permissions['superadmin']['mealplan']['mealplandelete'] = true;
-
+/****************Language module******************************/
+$permissions['superadmin']['language']['index'] = true;
+$permissions['superadmin']['language']['editlabel'] = true;
+$permissions['superadmin']['language']['updatelabel'] = true;
 /*--------------------------------------------------- end Super-superadmin permissions----------------------------**/
 
 ?>

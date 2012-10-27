@@ -11,12 +11,12 @@ class Translate
         
 
         $CI->db->query("SET NAMES 'utf8'");
-        $sql = "SELECT id FROM td_labels WHERE keytext = '" . stripslashes($keytext) ."' AND lang = '" . $lang . "' ";
+        $sql = "SELECT id FROM tbl_labels WHERE keytext = '" . stripslashes($keytext) ."' AND lang = '" . $lang . "' ";
         $query = $CI->db->query($sql);
         $row = $query->result_array();
         
         if($query->num_rows() == 0) {
-            $add_labels_sql = "INSERT INTO td_labels(lang, keytext, lvalue, section)
+            $add_labels_sql = "INSERT INTO tbl_labels(lang, keytext, lvalue, section)
                                 VALUES('" . $lang . "', '" . addslashes($keytext) . "', '" . addslashes($keytext) . "', '" . $section . "')";
             $CI->db->query($add_labels_sql);
         } else {
@@ -25,7 +25,7 @@ class Translate
                 $id = $result['id'];
                 $CI->db->query("SET NAMES 'utf8'");
                 $sql2 = "SELECT lvalue
-                         FROM td_labels
+                         FROM tbl_labels
                          WHERE id = " . $id . " AND keytext = '" . $keytext . "' AND lang='" . $lang . "' ";
                 $qry2 = $CI->db->query($sql2);
                 $row2 = $qry2->result_array();
