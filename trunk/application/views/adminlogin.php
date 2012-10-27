@@ -2,20 +2,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title><?php echo $title; ?></title>
+<title></title>
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/base/jquery-ui.css" type="text/css" media="all" />
-<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/screen.css" type="text/css" media="screen" title="default" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/login.css" type="text/css" media="screen" title="default" />
 
-<!--<script language="javascript" type="text/javascript" src="<?php //echo base_url(); ?>js/admin/jquery-1.4.1.min.js"></script>
-<script language="javascritp" type="text/javascript" src="<?php //echo base_url(); ?>js/admin/jquery.pngFix.pack.js"></script>-->
+<script language="javascript" type="text/javascript" src="<?php echo base_url(); ?>js/admin/jquery-1.5.2.min.js"></script>
+<script language="javascritp" type="text/javascript" src="<?php echo base_url(); ?>js/admin/jquery.pngFix.pack.js"></script>
 <script type="text/javascript">
-/*$(document).ready(function(){
+$(document).ready(function(){
 $(document).pngFix( );
-});*/
+});
+
+function setVal(ele)
+{
+    if(ele.value)
+    {
+        ele.value = "";
+    }
+}
 </script>
 <!--<script language="javascript" type="text/javascript" src="<?php //echo base_url(); ?>js/admin/script.js"></script>-->
 </head>
-<body id="login-bg"> 
+<body id="login-bg">
  <!-- start logo -->
 	<div id="logo-login">
             <img src="<?php echo base_url(); ?>images/logo.jpg" />
@@ -28,13 +36,12 @@ $(document).pngFix( );
 	<?php echo $contents; ?>
  <!--  end loginbox -->
 </div>
-    
-<!-- start footer -->         
+
+<!-- start footer -->
 <div id="login_footer">
 	<!--  start footer-left -->
-	Copyright &copy; 2012 Explorer Srilanka. Powered by e-designers.
+
 </div>
 <!-- End: login-holder -->
 </body>
 </html>
-?>
