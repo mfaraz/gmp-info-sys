@@ -1,0 +1,78 @@
+.tabberlive .tabbertabhide {
+    display: none;
+}
+.tabber {
+}
+.tabberlive {
+    margin-top: 1em;
+}
+ul.tabbernav {
+    border-bottom: 1px solid #777788;
+    font: bold 12px Verdana,sans-serif;
+    margin: 0;
+    padding: 3px 0;
+}
+ul.tabbernav li {
+    display: inline;
+    list-style: none outside none;
+    margin: 0;
+}
+ul.tabbernav li a {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #DDDDEE;
+    border-color: #777788 #777788 -moz-use-text-color;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    margin-left: 3px;
+    padding: 3px 0.5em;
+    text-decoration: none;
+}
+ul.tabbernav li a:link {
+    color: #444488;
+}
+ul.tabbernav li a:visited {
+    color: #666677;
+}
+ul.tabbernav li a:hover {
+    background: none repeat scroll 0 0 #AAAAEE;
+    border-color: #222277;
+    color: #000000;
+}
+ul.tabbernav li.tabberactive a {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+ul.tabbernav li.tabberactive a:hover {
+    background: none repeat scroll 0 0 white;
+    border-bottom: 1px solid white;
+    color: #000000;
+}
+.tabberlive .tabbertab {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #AAAAAA #AAAAAA;
+    border-right: 1px solid #AAAAAA;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+}
+.tabberlive .tabbertab h2 {
+    display: none;
+}
+.tabberlive .tabbertab h3 {
+    display: none;
+}
+#tab1.tabberlive {
+}
+#tab2.tabberlive {
+}
+#tab2.tabberlive .tabbertab {
+    height: 200px;
+    overflow: auto;
+}

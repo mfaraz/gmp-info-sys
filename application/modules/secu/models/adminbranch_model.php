@@ -273,6 +273,7 @@ class Adminbranch_model extends  Model {
                 WHERE B.tbl_zones_tbl_divisions_divisionid = " . $division_id;
         $qry = $this->db->query($sql);
         $result_arr = $qry->result_array();
+
         return $result_arr;
     }
 
@@ -284,6 +285,16 @@ class Adminbranch_model extends  Model {
                 WHERE B.branchid = " . $branch_id;
         $qry = $this->db->query($sql);
         $result_arr = $qry->result_array();
+
+        return $result_arr;
+    }
+
+    function getDesignations()
+    {
+        $sql = "SELECT * FROM tbl_designations";
+        $qry = $this->db->query($sql);
+        $result_arr = $qry->result_array();
+
         return $result_arr;
     }
 }
