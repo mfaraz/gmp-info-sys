@@ -34,6 +34,8 @@ $permissions['admin']['organization']['addmember'] = true;
 $permissions['admin']['organization']['doaddmember'] = true;
 $permissions['admin']['organization']['addreligiousorg'] = true;
 $permissions['admin']['organization']['doaddreligiousorg'] = true;
+$permissions['admin']['organization']['addbranchorg'] = true;
+$permissions['admin']['organization']['doaddbranchorg'] = true;
 
 /****************Language module******************************/
 $permissions['admin']['language']['index'] = true;
@@ -68,6 +70,8 @@ $permissions['superadmin']['organization']['addmember'] = true;
 $permissions['superadmin']['organization']['doaddmember'] = true;
 $permissions['superadmin']['organization']['addreligiousorg'] = true;
 $permissions['superadmin']['organization']['doaddreligiousorg'] = true;
+$permissions['superadmin']['organization']['addbranchorg'] = true;
+$permissions['superadmin']['organization']['doaddbranchorg'] = true;
 
 /****************Language module******************************/
 $permissions['superadmin']['language']['index'] = true;

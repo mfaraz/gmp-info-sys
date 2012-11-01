@@ -1,7 +1,7 @@
 <div class="form_content">
     <header><h3>Add Member</h3></header>
     <div class="module_content">
-        <form name="branchform" id="branchform" method="post" action="<?php echo base_url(); ?>secu/organization/doaddmember" onsubmit="return validateMemberForm()">
+        <form name="branchform" id="branchform" method="post" enctype="multipart/form-data" action="<?php echo base_url(); ?>secu/organization/doaddmember" onsubmit="return validateMemberForm()">
         <fieldset style="width:48%; float:left; margin-right: 3%;">
             <label>Division</label>
             <select name="division" id="division" onchange="filterZones(this.value);" style="width: 300px;">
@@ -41,23 +41,48 @@
         </fieldset>
         <fieldset style="width:100%; float:left;">
             <label>Member Address</label>
-            <textarea name="memberaddr" id="memberaddr" cols="50" rows="10"></textarea>
+            <textarea name="memberaddr" id="memberaddr" cols="50" rows="10" style="height: 100px;"></textarea>
         </fieldset>
         <fieldset style="width:100%; float:left;">
             <label>Member Contact No.</label>
-            <input type="text" name="membertel" id="membertel" value="" />
+            <input type="text" name="membertel" id="membertel" value="" style="width: 200px;" />
         </fieldset>
         <fieldset style="width:48%; float:left; margin-right: 3%;">
             <label>Service Period</label>
-            <input type="text" name="memberservice" id="memberservice" value="" style="width: 390px;" />
+            <!--<input type="text" name="memberservice" id="memberservice" value="" style="width: 390px;" />-->
+            <select name="memberservice" id="memberservice" style="width: 200px;">
+                <option value="">Select Service Period</option>
+                <?php
+                    for ($i = 1; $i <= 40; $i++) :
+                ?>
+                    <option value="<?php echo $i; ?>"><?php echo $i; ?> years</option>
+                <?php
+                    endfor;
+                ?>
+            </select>
         </fieldset>
         <fieldset style="width:48%; float:left;">
             <label>Designation</label>
-            <input type="text" name="designation" id="designation" value="" style="width: 390px;" />
+            <!--<input type="text" name="designation" id="designation" value="" style="width: 390px;" />-->
+            <select name="designation" id="designation" style="width: 200px;">
+                <option value="">Select Designation</option>
+                <?php
+                    foreach ($designation_arr as $_designation) :
+                ?>
+                            <option value="<?php echo $_designation['designationid']; ?>"><?php echo $_designation['designationname']; ?></option>
+                <?php
+                    endforeach;
+                ?>
+
+            </select>
         </fieldset>
         <fieldset style="width:100%; float:left;">
             <label>Other Info</label>
-            <textarea type="text" name="memberotherinfo" id="memberotherinfo" value="" /></textarea>
+            <textarea name="memberotherinfo" id="memberotherinfo" cols="70" rows="20" style="height: 130px;"></textarea>
+        </fieldset>
+        <fieldset style="width:100%; float:left;">
+            <label>Profile Picture</label>
+            <input type="file" name="memberprofilepic" id="memberprofilepic" size="80" />
         </fieldset>
         <fieldset style="width:100%; float:left;">
             <input type="submit" name="submit" id="submit" value="SAVE" />&nbsp;

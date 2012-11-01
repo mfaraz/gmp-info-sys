@@ -4,7 +4,7 @@ function getCity(id)
    $.ajax({
         type: "POST",
         data: ({country_id: id}),
-        url: "http://explorersrilanka.indisil.com/secu/hotel/getcity",
+        url: "http://localhost/gmpinfosys/secu/hotel/getcity",
         success: function(data, textStatus, XMLHttpRequest){
            $("#show_city_list").html(data);
            $("#city_list").hide();
@@ -23,7 +23,7 @@ function delHotel(hotelid)
     $.ajax({
             type: "POST",
             data: ({hotelid: hotelid}),
-            url: "http://explorersrilanka.thecodesphere.com/admin/delhotel",
+            url: "http://localhost/gmpinfosys/admin/delhotel",
             success: function(data, textStatus, XMLHttpRequest){
                alert(data);
             },
@@ -35,39 +35,100 @@ function delHotel(hotelid)
        return false;
     } 
 }
-function isNumber(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
-}
-function isDate (x)
+
+
+function filterZones(division_id)
 {
-  return (null != x) && !isNaN(x) && ("undefined" !== typeof x.getDate);
+    $.ajax({
+        type: "POST",
+        data: ({division_id: division_id}),
+        url: "http://localhost/gmpinfosys/secu/branch/getzonesbydivs",
+        success: function(data, textStatus, XMLHttpRequest){
+            if(data != "")
+            {
+                $("#zone").html(data);
+            }
+        },
+        complete: function complete(XMLHttpRequest, textStatus){
+
+        }
+    });
 }
 
-
-function hascheckboxes(checkboxarray)
-        {
-            // assigh the name of the checkbox;
-            var chks = checkboxarray;
-
-            var hasChecked = false;
-            // Get the checkbox array length and iterate it to see if any of them is selected
-            for (var i = 0; i < chks.length; i++)
+function filterBranches(zone_id, division_id)
+{
+    $.ajax({
+        type: "POST",
+        data: ({division_id: division_id, zone_id: zone_id}),
+        url: "http://localhost/gmpinfosys/secu/branch/getbranchbyzone",
+        success: function(data, textStatus, XMLHttpRequest){
+            if(data != "")
             {
-                    if (chks[i].checked)
-                    {
-                            hasChecked = true;
-                            break;
-                    }
+                $("#branch").html(data);
             }
+        },
+        complete: function complete(XMLHttpRequest, textStatus){
 
-            return  hasChecked;
         }
-        function isEmail(email) {
-        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email);
-       }
-       function isURL(s) {
-	var regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
-	return regexp.test(s);
-       }
+    });
+}
 
+function filterOrgs(branch_id, division_id, zone_id)
+{
+    $.ajax({
+        type: "POST",
+        data: ({branch_id: branch_id, division_id: division_id, zone_id: zone_id}),
+        url: "http://localhost/gmpinfosys/secu/branch/getorgbybranch",
+        success: function(data, textStatus, XMLHttpRequest){
+            if(data != "")
+            {
+                $("#organization").html(data);
+            }
+        },
+        complete: function complete(XMLHttpRequest, textStatus){
+
+        }
+    });
+}
+
+function showBranches(zone_id, sect)
+{
+    $("#loader").html("<img src='../../images/admin/ajax-loader.gif' />");
+    $.ajax({
+        type: "POST",
+        data: ({zone_id: zone_id, sect: sect}),
+        url: "http://localhost/gmpinfosys/secu/admin/getbranches",
+        success: function(data, textStatus, XMLHttpRequest){
+            if(data != "")
+            {
+                $("#loader").hide();
+                $("#branch_"+sect+"_"+zone_id).show();
+                $("#branch_"+sect+"_"+zone_id).html(data);
+            }            
+        },
+        complete: function complete(XMLHttpRequest, textStatus){
+
+        }
+    });
+}
+
+function listOrganizations(zone_id, branch_id, division_id, sect)
+{
+    $("#loader").html("<img src='../../images/admin/ajax-loader.gif' />");
+    $.ajax({
+        type: "POST",
+        data: ({zone_id: zone_id, branch_id: branch_id, division_id: division_id}),
+        url: "http://localhost/gmpinfosys/secu/admin/getorgdetails",
+        success: function(data, textStatus, XMLHttpRequest){
+            if(data != "")
+            {
+                $("#loader").hide();
+                $("#organization_"+sect).show();
+                $("#organization_"+sect).html(data);
+            }
+        },
+        complete: function complete(XMLHttpRequest, textStatus){
+
+        }
+    });
+}

@@ -90,8 +90,9 @@ if(!isset($this->session->userdata->admin_id))
 		<ul class="toggle">
 			<li class="icn_new_article"><a href="<?php echo base_url(); ?>secu/zone/addzone">Add Zone (කලාප)</a></li>
 			<li class="icn_new_article"><a href="<?php echo base_url(); ?>secu/branch/addbranch">Add Branch (ශාඛා)</a></li>
-            <li class="icn_new_article"><a href="<?php echo base_url(); ?>secu/organization/addreligiousorg">Add Religious Organizations(විහාරස්ථ නාම ලේඛණය)</a></li>
-            <li class="icn_new_article"><a href="<?php echo base_url(); ?>secu/organization/addmember">Add Organization Members</a></li>
+			<li class="icn_new_article"><a href="<?php echo base_url(); ?>secu/organization/addbranchorg">Add Branch Organization</a></li>
+			<li class="icn_new_article"><a href="<?php echo base_url(); ?>secu/organization/addreligiousorg">Add Religious Organization(විහාරස්ථ නාම ලේඛණය)</a></li>
+            <li class="icn_new_article"><a href="<?php echo base_url(); ?>secu/organization/addmember">Add Organization Member</a></li>
 		</ul>
                 
 		<footer>
