@@ -1,31 +1,6 @@
 <!-- Branch Organisation Details Search start -->
 <div class="article2">
-    <div class="section2 app-search">
-        <h1>Branch Organisation Committee Details:</h1>
-        <form action="" method="get" name="">
-            <div class="form-sect-1">
-                <label class="lablebox">Division [කොට්ඨාශය] :</label>
-                <select name="division" id="cmbDivision" style="width:328px;" class="roundList" onchange="getRegion(this.value)">
-                    <option value="">Select..</option>
-                    <option value="1">Uda Palatha</option>
-                    <option value="2">Doluwa</option>
-                </select>
-
-                <label class="lablebox">Region [කලාපය] :</label>
-                <select name="zone" style="width:328px;" class="roundList" id="cmbRegion">
-                    <option value="">Select..</option>
-                </select>
-                <div id="setregion" style="display: none;"></div>
-
-                <label class="lablebox">Branch [ශාඛාව] :</label>
-                <select name="branch" style="width:328px;" class="roundList" id="cmbBranch">
-                    <option value="">Select..</option>
-                </select>
-                <div id="setbranch" style="display: none;"></div>
-                <input name="search" type="button" value="Search Organization" class="s-btn2" style="float:left;" onclick="getSearchResult();" />
-            </div>
-        </form>
-    </div>
+    <?php $this->load->view("topsearch"); ?>
 </div><!-- Branch Organisation Details Search end -->
 
 <!--
@@ -131,12 +106,12 @@
 <div class="section">
     <a href="#"><img src="<?php echo base_url(); ?>images/photos-034.jpg" width="158" height="143" alt=""/></a>
     <div>
-        <h3><a href="#">Religious Information</a></h3>
+        <!--<a href="#" class="time">Sept 21  by Nelum</a>-->
         <p>Pellentesque ac magna sit amet metus pretium ultricies. Nulla risus erat, varius ut tincidunt non, scelerisque ut mi.  Maecenas elit purus, dapibus in hendrerit in, consequat nec mi.</p>
 
         <!-- Update Time/ Print / PDF section Start -->
         <div class="stats">
-            <a href="#" class="time">Sept 21  by Nelum</a>
+            <!--<a href="#" class="time">Sept 21  by Nelum</a>-->
             <a href="#" class="facebook">PDF</a>
             <a href="#" class="twitter">Print</a>
         </div><!-- Update Time/ Print / PDF section End -->
@@ -151,7 +126,7 @@
 
         <!-- Update Time/ Print / PDF section Start -->
         <div class="stats">
-            <a href="#" class="time">Sept 21  by Nelum</a>
+            <!--<a href="#" class="time">Sept 21  by Nelum</a>-->
             <a href="#" class="facebook">PDF</a>
             <a href="#" class="twitter">Print</a>
         </div><!-- Update Time/ Print / PDF section End -->

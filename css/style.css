@@ -1024,7 +1024,7 @@ table, tbody, tfoot, thead, tr, th, td {
 .pagination ul{
 	margin: 0 auto 0 auto;
 	padding: 0;
-	text-align:center; /*Set to “right” to right align pagination interface*/
+	text-align:center; /*Set to ï¿½rightï¿½ to right align pagination interface*/
 	font-size: 12px;
 	font-family:Arial, Helvetica, sans-serif;
 }
@@ -1192,17 +1192,22 @@ table, tbody, tfoot, thead, tr, th, td {
 
 /*------------------------- Body End ------------------------*/
 
+#clear_result {
+    font-size:11px;
+    color:#8591a3;
+    margin: 15px 0 0 0;
+}
 
+#profiler th {
+    font-family: "Bitstream Vera Sans Mono";
+    font-size: 15px;
+    color: #888888;
+    text-align: left;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+#profiler td {
+    font-family: "Bitstream Vera Sans Mono";
+    font-size: 14px;
+    color: #5A5A6B;
+    vertical-align: top;
+}

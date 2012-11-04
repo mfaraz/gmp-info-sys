@@ -48,3 +48,10 @@
 }
 
 .login-box-options a { color: #ebebeb; font-size: 11px; }
+
+.login_error {
+    color: #FF0000;
+    font-family: Verdana;
+    font-size: 11px;
+
+}

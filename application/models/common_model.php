@@ -215,5 +215,43 @@ FROM tbl_members m
 
         return $result_arr;
     }
+
+    function getReligiousInfo($category)
+    {
+        if($category == "All")
+        {
+            $where = "";
+        } else {
+            $where = "WHERE OC.orgcatdsc = '" . $category . "' ";
+        }
+
+        $sql = "SELECT O.*, OC.orgcatdsc AS ORG, M.membername, M.memberimage FROM tbl_organizations O
+                LEFT JOIN tbl_organizationcats OC ON OC.orgcatid = O.tbl_organizationcats_orgcatid
+                LEFT JOIN tbl_organizations_has_tbl_members OM ON OM.tbl_organizations_orgid = O.orgid
+                LEFT JOIN tbl_members M ON M.memberid = OM.tbl_members_memberid
+                " . $where;
+        $qry = $this->db->query($sql);
+        $result_arr = $qry->result_array();
+
+        return $result_arr;
+    }
+
+    function getOrgDetailsById($orgid)
+    {
+        $sql = "SELECT O.*, OC.orgcatdsc AS ORG, M.memberid, M.membername, M.memberimage, B.branchname, Z.zonename, D.divisionname
+                FROM tbl_organizations O
+                LEFT JOIN tbl_organizationcats OC ON OC.orgcatid = O.tbl_organizationcats_orgcatid
+                LEFT JOIN tbl_organizations_has_tbl_members OM ON OM.tbl_organizations_orgid = O.orgid
+                LEFT JOIN tbl_members M ON M.memberid = OM.tbl_members_memberid
+                LEFT JOIN tbl_branches B ON B.branchid = O.tbl_branches_branchid
+                LEFT JOIN tbl_zones Z ON Z.zoneid = O.tbl_branches_tbl_zones_zoneid
+                LEFT JOIN tbl_divisions D ON D.divisionid - O.tbl_branches_tbl_zones_tbl_divisions_divisionid
+                WHERE O.orgid = " . $orgid;
+
+        $qry = $this->db->query($sql);
+        $result_arr = $qry->row();
+
+        return $result_arr;
+    }
 }
 ?>

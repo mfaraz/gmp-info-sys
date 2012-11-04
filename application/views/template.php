@@ -8,6 +8,7 @@
     <meta name="keywords" content="_your,keywords,goes,here_" />
     <meta name="author" content="PM Office" />
     <!-- General CSS --><link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css" type="text/css" charset="utf-8" />
+
     <!-- General JS  --><script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.js"></script>
 
     <!-- Listbox Styling
@@ -79,11 +80,20 @@
     </script>
 
     <!-- Table CSS Styling  -->
+    <?php
+        if($this->router->class == "religious") {
+    ?>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/tables-02.css" type="text/css" />
+    <?php } else { ?>
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/tables-01.css" type="text/css" />
+    <?php } ?>
     <!-- Flexcible Table Styling  -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/flexigrid.pack.css" />
     <script type="text/javascript" src="<?php echo base_url(); ?>js/flexigrid.pack.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>js/custom.js"></script>
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/admin/colorbox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="<?php echo base_url(); ?>js/admin/jquery.colorbox.js"></script>
     <!-- Scrollbar Styling  -->
 
 </head>
@@ -106,12 +116,12 @@
     <div id="navigation_vert">
 
         <!-- Gampola [General Info] start  -->
-        <h1><a href="about-gampola.html"><b>Gampola</b> [ General Info ]</a></h1>
+        <h1><a href="<?php echo base_url(); ?>about/aboutgampola"><b>Gampola</b> [ General Info ]</a></h1>
         <ul>
-            <li><a href="about-map.html" class="navlink">Supeivision Map</a></li>
-            <li><a href="about-historical.html" class="navlink">Historical Information</a></li>
-            <li><a href="about-creatures.html" class="navlink">Creatures Plants</a></li>
-            <li><a href="about-gallery.html" class="navlink">Gallery</a></li>
+            <li><a href="<?php echo base_url(); ?>about/aboutmap" class="navlink">Supeivision Map</a></li>
+            <li><a href="<?php echo base_url(); ?>about/historical" class="navlink">Historical Information</a></li>
+            <li><a href="<?php echo base_url(); ?>about/creatures" class="navlink">Creatures Plants</a></li>
+            <li><a href="<?php echo base_url(); ?>about/gallery" class="navlink">Gallery</a></li>
         </ul><!-- Gampola [General Info] end  -->
 
         <!-- Population Statistics start  -->
@@ -182,22 +192,26 @@
         </ul><!-- Organisations end  -->
 
         <!-- Religious Information start  -->
-        <h1><a href="religious-info.html"><b>Religious Information</b></a></h1>
+        <h1><a href="<?php echo base_url(); ?>religious/info/all"><b>Religious Information</b></a></h1>
         <ul>
-            <li><a href="religious-info.html" class="navlink">Buddhist Temple List</a></li>
-            <li><a href="religious-info.html" class="navlink">Monastery List</a></li>
-            <li><a href="religious-info.html" class="navlink">Hindu Kovil List</a></li>
-            <li><a href="religious-info.html" class="navlink">Christian Church List</a></li>
-            <li><a href="religious-info.html" class="navlink">Islam mosque List</a></li>
+            <li><a href="<?php echo base_url(); ?>religious/info/temple" class="navlink">Buddhist Temple List</a></li>
+            <li><a href="<?php echo base_url(); ?>religious/info/monastry" class="navlink">Monastery List</a></li>
+            <li><a href="<?php echo base_url(); ?>religious/info/kovil" class="navlink">Hindu Kovil List</a></li>
+            <li><a href="<?php echo base_url(); ?>religious/info/church" class="navlink">Christian Church List</a></li>
+            <li><a href="<?php echo base_url(); ?>religious/info/mosque" class="navlink">Islam mosque List</a></li>
         </ul><!-- Religious Information end  -->
     </div><!-- Left Navigation Menu end ------------ -->
 
     <!-- Login Info start -->
     <div id="logininfo">
         <h3>Login info:</h3>
-        <p><img src="<?php echo base_url(); ?>images/log-face.jpg" class="image-01-right" width="60" alt=""/>Welcome <b>Name..</b><br/>You logged as a Superadmin<br/><br/><a href="#">Profile info</a>&nbsp; | &nbsp;<a href="#">Logout</a></p>
+        <p><img src="<?php echo base_url(); ?>images/log-face.jpg" class="image-01-right" width="60" alt=""/>Welcome <b><?php echo $this->session->userdata('admin_username'); ?></b><br/>You logged as <?php echo $this->session->userdata('admin_usertype'); ?><br/><br/><a href="javascript: void(0);" onclick="showAdminProfile(<?php echo $this->session->userdata('admin_id'); ?>)">Profile info</a>&nbsp; | &nbsp;<a href="<?php echo base_url(); ?>index/logout">Logout</a></p>
     </div><!-- Login Info end -->
+    <div style='display:none'>
+        <div id='adminprofiler' style='padding:10px; background:#fff;'>
 
+        </div>
+    </div>
     <!-- Left Article Section start  -->
     <div id="left-article">
         <h3>About :</h3>
