@@ -108,7 +108,7 @@
 <!-- Left Section start -->
 <div class="sidebar">
     <div class="featured">
-        <a href="index.html" class="figure"><img src="<?php echo base_url(); ?>images/logo-top.png" alt=""/></a>
+        <a href="<?php echo base_url(); ?>" class="figure"><img src="<?php echo base_url(); ?>images/logo-top.png" alt=""/></a>
         <h1>Information System</h1>
     </div>
 
@@ -188,7 +188,7 @@
         <h1><a href="#"><b>Organisations</b></a></h1>
         <ul>
             <li><a href="<?php echo base_url(); ?>organization/orgmemberinfo" class="navlink">Branch Committee Details</a></li>
-            <li><a href="org-member-list.html" class="navlink">Committee Member List</a></li>
+            <li><a href="<?php echo base_url(); ?>organization/committeememberlist" class="navlink">Committee Member List</a></li>
         </ul><!-- Organisations end  -->
 
         <!-- Religious Information start  -->
@@ -215,7 +215,7 @@
     <!-- Left Article Section start  -->
     <div id="left-article">
         <h3>About :</h3>
-        <p>Gampola is a town located near Kandy in the Central Province of Sri Lanka. Gampola was made the capital city of the island by King Buwanekabahu IV, who ruled for four years in the mid fourteenth century. The last king of Gampola was..<a href="#">read more»</a></p>
+        <p>Gampola is a town located near Kandy in the Central Province of Sri Lanka. Gampola was made the capital city of the island by King Buwanekabahu IV, who ruled for four years in the mid fourteenth century. The last king of Gampola was..<a href="<?php echo base_url(); ?>about/aboutgampola">read more»</a></p>
 
         <h3>Area Map :</h3>
         <iframe width="215" height="215" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" class="gampolamap" src="https://maps.google.com/maps?hl=en&amp;q=Gampola,+Kandy,+Central+Province,+Sri+Lanka&amp;ie=UTF8&amp;geocode=FTJTbQAdm4DNBA&amp;split=0&amp;sll=37.0625,-95.677068&amp;sspn=23.875,57.630033&amp;hq=&amp;hnear=Gampola,+Kandy,+Central+Province,+Sri+Lanka&amp;t=m&amp;source=embed&amp;ll=7.164682,80.576563&amp;spn=0.136427,0.261612&amp;z=13&amp;output=embed"></iframe><br />
@@ -232,7 +232,6 @@
             <li><b>Distance from Colombo: </b>122 Km (4.00 hour drive) Last Modified: 28 Nov 2012 </li>
             <li><a href="#">Lorem ipsum dolor sit amet</a></li>
         </ul>
-        <span>Sept 21 | by <a href="#">Nelum</a></span>
 
     </div><!-- Left Article Section end  -->
 
@@ -252,9 +251,8 @@
     <ul id="navigation">
         <li class="selected"><a href="index.html">Home</a></li>
         <li><a href="#">User Management</a></li>
-        <li><a href="#">Profile info</a></li>
+        <li><a href="javascript: void(0);" onclick="showAdminProfile(<?php echo $this->session->userdata('admin_id'); ?>)">Profile info</a></li>
         <li><a href="#">History</a></li>
-        <li><a href="#" style="background-color:#CC0000; color:#f2c1d3; border:1px solid #eb5555;">Logout</a></li>
     </ul>
     <!-- Top Navigation end-->
 
@@ -262,12 +260,6 @@
 
     <!-- Page Navigation start-->
     <?php echo $contents; ?>
-
-        <!-- Bottom Navigation Root Start -->
-        <div id="btm-navi">
-            <a href="index.html">Home Page</a>
-        </div><!-- Bottom Navigation Root End -->
-
     </div><!-- .article section End -->
 </div><!-- Main Right Section end ------------------------------------------ -->
 </div><!-- Full Page Section end -->

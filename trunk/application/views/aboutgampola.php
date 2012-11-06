@@ -10,7 +10,7 @@
 <!-- Page Navigation end-->
 
 <ul class="about-navi">
-    <li><a href="<?php echo base_url(); ?>about/about" class="active">About </br>Gampola</a></li>
+    <li><a href="<?php echo base_url(); ?>about/aboutgampola" class="active">About </br>Gampola</a></li>
     <li><a href="<?php echo base_url(); ?>about/aboutmap">Supeivision </br> Map</a></li>
     <li><a href="<?php echo base_url(); ?>about/historical">Historical </br> Information</a></li>
     <li><a href="<?php echo base_url(); ?>about/creatures">Creatures </br> &amp; Plants</a></li>
@@ -62,12 +62,7 @@
             Please feel free to remove some or all the text and links of this page and replace it with your own About content.</p>
     </div>
 
-    <!-- Update Time/ Print / PDF section Start -->
-    <div class="stats">
-        <a href="#" class="time">Sept 21  by Nelum</a>
-        <a href="#" class="facebook">PDF</a>
-        <a href="#" class="twitter">Print</a>
-    </div><!-- Update Time/ Print / PDF section End -->
+
 </div><!-- #featured section end -->
 </div>
 <!-- .article section Start -->
@@ -110,18 +105,13 @@
             </div>
             <!-- Area Sections Tabs End -->
 
-            <!-- Update Time/ Print / PDF section Start -->
-            <div class="stats">
-                <a href="#" class="time">Sept 21  by Nelum</a>
-                <a href="#" class="facebook">PDF</a>
-                <a href="#" class="twitter">Print</a>
-            </div><!-- Update Time/ Print / PDF section Start -->
+
         </div>
     </div>
 
     <!-- Bottom Navigation Root Start -->
     <div id="btm-navi">
-        <a href="#">Gampola</a> &rarr; <a href="#">About Gampola</a>
+        <a href="<?php echo base_url(); ?>">Home</a> &rarr; About Gampola
     </div><!-- Bottom Navigation Root End -->
 
 </div><!-- .article section End -->

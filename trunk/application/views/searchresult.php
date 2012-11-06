@@ -1,5 +1,13 @@
 <!-- Main/Youth/Women Organisation Search results setcion start	-->
-<div class="news">
+
+<?php
+if($controller == 'religious' && $action == "details" || $controller == 'about' && $action == "aboutgampola")
+{
+    ?>
+    <div class="news" style="margin: 0 0 0 15px;">
+<?php
+}
+?>
 
 <!-- Branch Search results start -->
 <div class="section-02 st">
@@ -55,13 +63,21 @@
     </table>
     <?php
         } else {
-            echo "<span style='color: #ff0000;'>No Search result for your search criteria</span>";
+            echo "<div class='noresult'>No Search result for your search criteria</div>";
         }
     ?>
     <div id="clear_result"><a href="javascript: void(0);" onclick="clearResult()">clear search result</a></div>
 </div><!-- Gampola (Organisation List) end -->
 </div><!-- Gampola→ Division 01→ Region 02→ Branch(Organisation List) end-->
 
+<?php
+if($controller == 'religious' && $action == "details" || $controller == 'about' && $action == "aboutgampola")
+{
+    ?>
+    </div>
+<?php
+}
+?>
 
 <!-- Gampola→ Division 01→ Region 02→ Branch(Organisation List) end -------------------------------------------------------- -->
 
@@ -80,12 +96,11 @@
 
 </div><!-- Main/Youth/Women Organisation Search results setcion end	-->
 
-<div class="section">
-    <a href="#"><img src="images/photos-034.jpg" width="158" height="143" alt=""/></a>
+<!--<div class="section">
+    <a href="#"><img src="<?php /*echo base_url(); */?>images/photos-034.jpg" width="158" height="143" alt="" /></a>
     <div>
-        <h3><a href="#">Religious Information</a></h3>
+        <h3><a href="<?php /*echo base_url(); */?>religious/info/all">Religious Information</a></h3>
         <p>Pellentesque ac magna sit amet metus pretium ultricies. Nulla risus erat, varius ut tincidunt non, scelerisque ut mi.  Maecenas elit purus, dapibus in hendrerit in, consequat nec mi.</p>
 
 
-    </div>
-</div>
+    </div>-->

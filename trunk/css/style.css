@@ -535,7 +535,7 @@ body{
 	text-decoration:none;
 }
 
-.s-btn1{ padding: 5px 34px 6px 34px;}
+.s-btn1{ padding: 5px 25px 6px 25px;}
 .s-btn2{ padding: 5px 15px 6px 15px;}
 
 .s-btn1:hover{ background-color:#000000; }
@@ -1210,4 +1210,10 @@ table, tbody, tfoot, thead, tr, th, td {
     font-size: 14px;
     color: #5A5A6B;
     vertical-align: top;
+}
+
+.noresult {
+    font-size: 11px;
+    color: #FF0000;
+    margin: 15px 0 0 0;
 }

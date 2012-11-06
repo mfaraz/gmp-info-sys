@@ -23,12 +23,7 @@ if($division_id == 1) {
         <p><img src="<?php echo base_url(); ?>images/gampola-map.png" width="190" class="left-align" style="border:5px solid #868593;" alt=""/>You can remove any link to our website from this website template, you're free to use this website template without linking back to us. <br/><br/> If you're having problems editing this website template, then don't hesitate to ask for help on the You can remove any link to our website from this website template, you're free to use this website template without linking back to us.. 	<a href="#">read more</a>
     </div>
 
-    <!-- Update Time/ Print / PDF section Start -->
-    <div class="stats">
-        <!--<a href="#" class="time">Sept 21  by Nelum</a>-->
-        <a href="#" class="facebook">PDF</a>
-        <a href="#" class="twitter">Print</a>
-    </div><!-- Update Time/ Print / PDF section End -->
+
 </div><!-- #featured section end -->
 
 <!-- .article section Start -->
@@ -223,12 +218,7 @@ if($division_id == 1) {
         </table>
     </div><!-- Age Section end -->
     </div>
-    <!-- Update Time/ Print / PDF section Start -->
-    <div class="stats02">
-        <!--<a href="#" class="time">Sept 21  by Nelum</a>-->
-        <a href="#" class="facebook">PDF</a>
-        <a href="#" class="twitter">Print</a>
-    </div><!-- Update Time/ Print / PDF section End -->
+
 
 </div><!-- Race / Religion / Gender / Age  End	-->
 
@@ -265,12 +255,7 @@ if($division_id == 1) {
         </div>
         <!-- Area Sections Tabs End -->
 
-        <!-- Update Time/ Print / PDF section Start -->
-        <div class="stats">
-            <!--<a href="#" class="time">Sept 21  by Nelum</a>-->
-            <a href="#" class="facebook">PDF</a>
-            <a href="#" class="twitter">Print</a>
-        </div><!-- Update Time/ Print / PDF section Start -->
+
     </div>
 </div>
 

@@ -32,7 +32,7 @@
 <!-- Gampola (Organisation List) start -->
 <div id="searchresult" style="display: none;"></div>
 <div id="defaultresult">
-    <h5>Gampola (City Summery)</h5>
+    <h5>Gampola (City Summary)</h5>
     <h6>Chairman (List)</h6>
     <div class="table-style" style="position:relative; z-index:0;">
         <table class="flexme1">
@@ -95,12 +95,7 @@
 </script>
 </div><!-- Branch Search results end -->
 
-<!-- Update Time/ Print / PDF section Start -->
-<div class="stats02">
-    <!--<a href="#" class="time">Sept 21 by Nelum</a>
-    <a href="#" class="facebook">PDF</a>
-    <a href="#" class="twitter">Print</a>-->
-</div><!-- Update Time/ Print / PDF section End -->
+
 </div><!-- Main/Youth/Women Organisation Search results setcion end	-->
 
 <div class="section">
@@ -109,12 +104,7 @@
         <!--<a href="#" class="time">Sept 21  by Nelum</a>-->
         <p>Pellentesque ac magna sit amet metus pretium ultricies. Nulla risus erat, varius ut tincidunt non, scelerisque ut mi.  Maecenas elit purus, dapibus in hendrerit in, consequat nec mi.</p>
 
-        <!-- Update Time/ Print / PDF section Start -->
-        <div class="stats">
-            <!--<a href="#" class="time">Sept 21  by Nelum</a>-->
-            <a href="#" class="facebook">PDF</a>
-            <a href="#" class="twitter">Print</a>
-        </div><!-- Update Time/ Print / PDF section End -->
+
     </div>
 </div>
 
@@ -124,12 +114,7 @@
         <h3><a href="#">Gampola - Map Page</a></h3>
         <p>Pellentesque ac magna sit amet metus pretium ultricies. Nulla risus erat, varius ut tincidunt non, scelerisque ut mi.  Maecenas elit purus, dapibus in hendrerit in, consequat nec mi.</p>
 
-        <!-- Update Time/ Print / PDF section Start -->
-        <div class="stats">
-            <!--<a href="#" class="time">Sept 21  by Nelum</a>-->
-            <a href="#" class="facebook">PDF</a>
-            <a href="#" class="twitter">Print</a>
-        </div><!-- Update Time/ Print / PDF section End -->
+
     </div>
 </div>
 

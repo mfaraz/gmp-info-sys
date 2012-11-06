@@ -24,7 +24,10 @@ class Religious extends Controller {
 
         $detail_arr = $this->common_model->getOrgDetailsById($orgid);
         $data['detail_arr'] = $detail_arr;
-
+        $controller = $this->router->fetch_class();
+        $action = $this->router->fetch_method();
+        $data['action'] = $action;
+        $data['controller'] = $controller;
         $this->template->load('template', 'relorgdetails', $data);
 
     }
