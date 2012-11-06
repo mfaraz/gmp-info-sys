@@ -13,5 +13,19 @@ class Organization extends Controller {
         $data['chairman_by_division'] = $chairman_by_division;
         $this->template->load('template', 'orgmemberinfo', $data);
     }
+
+    public function committeememberlist()
+    {
+        $this->load->model("common_model");
+        $orgdetailsmain_arr = $this->common_model->getOrgDetailsMain();
+        $orgdetailsyouth_arr = $this->common_model->getOrgDetailsYouth();
+        $orgdetailswomen_arr = $this->common_model->getOrgDetailsWomen();
+
+        $data['orgdetailsmain_arr'] = $orgdetailsmain_arr;
+        $data['orgdetailsyouth_arr'] = $orgdetailsyouth_arr;
+        $data['orgdetailswomen_arr'] = $orgdetailswomen_arr;
+
+        $this->template->load('template', 'committememberlist', $data);
+    }
 }
 ?>

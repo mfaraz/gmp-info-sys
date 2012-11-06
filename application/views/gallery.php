@@ -78,8 +78,8 @@
     </div>
 
     <!-- Bottom Navigation Root Start -->
-    <!--<div id="btm-navi">
-        <a href="#">Gampola</a> &rarr; <a href="#">About Gampola</a>
-    </div>--><!-- Bottom Navigation Root End -->
+    <div id="btm-navi">
+        <a href="<?php echo base_url(); ?>about/aboutgampola">Gampola</a> &rarr; About Gampola
+    </div><!-- Bottom Navigation Root End -->
 
 </div><!-- .article section End -->

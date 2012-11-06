@@ -220,7 +220,7 @@ FROM tbl_members m
     {
         if($category == "All")
         {
-            $where = "";
+            $where = "WHERE OC.orgcatdsc = 'Temple' OR OC.orgcatdsc = 'Church' OR OC.orgcatdsc = 'Kovil' OR OC.orgcatdsc = 'Mosque'";
         } else {
             $where = "WHERE OC.orgcatdsc = '" . $category . "' ";
         }
@@ -250,6 +250,60 @@ FROM tbl_members m
 
         $qry = $this->db->query($sql);
         $result_arr = $qry->row();
+
+        return $result_arr;
+    }
+
+    function getOrgDetailsMain()
+    {
+        $sql = "SELECT O.*, dv.divisionname, zn.zonename, brn.branchname, m.membername, m.memberaddress, m.membertelephone
+                FROM tbl_members m
+                LEFT JOIN tbl_organizations_has_tbl_members om ON om.tbl_members_memberid = m.memberid
+                LEFT JOIN tbl_organizations O ON O.orgid = om.tbl_organizations_orgid
+                LEFT JOIN tbl_organizationcats OC ON OC.orgcatid = O.tbl_organizationcats_orgcatid
+                LEFT JOIN tbl_divisions dv ON dv.divisionid = O.tbl_branches_tbl_zones_tbl_divisions_divisionid
+                LEFT JOIN tbl_zones zn ON zn.zoneid = O.tbl_branches_tbl_zones_zoneid
+                LEFT JOIN tbl_branches brn ON brn.branchid = O.tbl_branches_branchid
+                WHERE OC.orgcatid = 5";
+
+        $qry = $this->db->query($sql);
+        $result_arr = $qry->result_array();
+
+        return $result_arr;
+    }
+
+    function getOrgDetailsYouth()
+    {
+        $sql = "SELECT O.*, dv.divisionname, zn.zonename, brn.branchname, m.membername, m.memberaddress, m.membertelephone
+                FROM tbl_members m
+                LEFT JOIN tbl_organizations_has_tbl_members om ON om.tbl_members_memberid = m.memberid
+                LEFT JOIN tbl_organizations O ON O.orgid = om.tbl_organizations_orgid
+                LEFT JOIN tbl_organizationcats OC ON OC.orgcatid = O.tbl_organizationcats_orgcatid
+                LEFT JOIN tbl_divisions dv ON dv.divisionid = O.tbl_branches_tbl_zones_tbl_divisions_divisionid
+                LEFT JOIN tbl_zones zn ON zn.zoneid = O.tbl_branches_tbl_zones_zoneid
+                LEFT JOIN tbl_branches brn ON brn.branchid = O.tbl_branches_branchid
+                WHERE OC.orgcatid = 6";
+
+        $qry = $this->db->query($sql);
+        $result_arr = $qry->result_array();
+
+        return $result_arr;
+    }
+
+    function getOrgDetailsWomen()
+    {
+        $sql = "SELECT O.*, dv.divisionname, zn.zonename, brn.branchname, m.membername, m.memberaddress, m.membertelephone
+                FROM tbl_members m
+                LEFT JOIN tbl_organizations_has_tbl_members om ON om.tbl_members_memberid = m.memberid
+                LEFT JOIN tbl_organizations O ON O.orgid = om.tbl_organizations_orgid
+                LEFT JOIN tbl_organizationcats OC ON OC.orgcatid = O.tbl_organizationcats_orgcatid
+                LEFT JOIN tbl_divisions dv ON dv.divisionid = O.tbl_branches_tbl_zones_tbl_divisions_divisionid
+                LEFT JOIN tbl_zones zn ON zn.zoneid = O.tbl_branches_tbl_zones_zoneid
+                LEFT JOIN tbl_branches brn ON brn.branchid = O.tbl_branches_branchid
+                WHERE OC.orgcatid = 7";
+
+        $qry = $this->db->query($sql);
+        $result_arr = $qry->result_array();
 
         return $result_arr;
     }

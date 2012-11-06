@@ -10,12 +10,14 @@ class Index extends Controller {
 
 	function index()
 	{
+        if($this->session->userdata('admin_id') > 0) {
+            redirect('index/dashboard');
+        }
         $this->template->load('logintemplate', 'login');
     }
 
     public function home()
     {
-        error_reporting(E_ALL);
         $this->load->library('form_validation');
 
         $validate_admin_login = array(

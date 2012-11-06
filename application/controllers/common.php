@@ -43,10 +43,20 @@ class Common extends Controller {
         $branch = $_POST['branch'];
         $this->load->model("common_model");
         $_collection = $this->common_model->getSearchResult($division, $region, $branch);
+
+        $url = $_SERVER['HTTP_REFERER'];
+
+        $url_arr = explode("/", $url);
+        $controller = $url_arr[4];
+        $action = $url_arr[5];
+
+        $data['controller'] = $controller;
+        $data['action'] = $action;
+
         $data['_collection'] = $_collection;
         $data['division'] = $division;
         $this->load->view('searchresult', $data);
-
+        //$this->template->load("template", 'searchresult', $data);
         /*foreach ($_collection as $_data)
         {
 

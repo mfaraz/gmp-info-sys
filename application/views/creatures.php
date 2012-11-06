@@ -365,12 +365,6 @@
 </table><!-- Plants list table end -->
 </div>
 
-<!-- Update Time/ Print / PDF section Start -->
-<div class="stats">
-    <a href="#" class="time">Sept 21  by Nelum</a>
-    <a href="#" class="facebook">PDF</a>
-    <a href="#" class="twitter">Print</a>
-</div><!-- Update Time/ Print / PDF section End -->
 </div><!-- #featured section end -->
 </div>
 <!-- .article section Start -->
@@ -382,18 +376,12 @@
             <h3><a href="#">Historical Information</a></h3>
             <p>Pellentesque ac magna sit amet metus pretium ultricies. Nulla risus erat, varius ut tincidunt non, scelerisque ut mi.  Maecenas elit purus, dapibus in hendrerit in, consequat nec mi.</p>
 
-            <!-- Update Time/ Print / PDF section Start -->
-            <div class="stats">
-                <a href="#" class="time">Sept 21  by Nelum</a>
-                <a href="#" class="facebook">PDF</a>
-                <a href="#" class="twitter">Print</a>
-            </div><!-- Update Time/ Print / PDF section End -->
         </div>
     </div>
 
     <!-- Bottom Navigation Root Start -->
     <div id="btm-navi">
-        <a href="#">Gampola</a> &rarr; <a href="#">Creatures & Plants</a>
+        <a href="<?php echo base_url(); ?>about/aboutgampola">Gampola</a> &rarr; About Gampola
     </div><!-- Bottom Navigation Root End -->
 
 </div><!-- .article section End -->

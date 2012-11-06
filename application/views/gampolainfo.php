@@ -5,12 +5,7 @@
         <small><a href="https://maps.google.com/maps?hl=en&amp;q=Gampola,+Kandy,+Central+Province,+Sri+Lanka&amp;ie=UTF8&amp;geocode=FTJTbQAdm4DNBA&amp;split=0&amp;sll=37.0625,-95.677068&amp;sspn=23.875,57.630033&amp;hq=&amp;hnear=Gampola,+Kandy,+Central+Province,+Sri+Lanka&amp;t=m&amp;source=embed&amp;ll=7.164682,80.576563&amp;spn=0.136427,0.261612&amp;z=13" style="color:#999999;text-align:left; font-family:Arial, Helvetica, sans-serif; font-size:11px; margin:0 0 0 14px;">View Larger Map</a></small>
     </div>
 
-    <!-- Update Time/ Print / PDF section Start -->
-    <div class="stats">
-        <!--<a href="#" class="time">Sept 21  by Nelum</a>-->
-        <a href="#" class="facebook">PDF</a>
-        <a href="#" class="twitter">Print</a>
-    </div><!-- Update Time/ Print / PDF section End -->
+
 </div><!-- #featured section end -->
 <div class="article">
 <!-- Udapalatha / Doluwa view details section Start -->
@@ -28,12 +23,7 @@
         <span><a href="#">View More</a></span>
     </div>
 
-    <!-- Update Time/ Print / PDF section Start -->
-    <div class="stats02">
-        <!--<a href="#" class="time">Sept 21  by Nelum</a>-->
-        <a href="#" class="facebook">PDF</a>
-        <a href="#" class="twitter">Print</a>
-    </div><!-- Update Time/ Print / PDF section End -->
+
 </div><!-- Udapalatha / Doluwa view details section End -->
 
 <!-- Race / Religion / Gender / Age  Start	-->
@@ -223,12 +213,7 @@
         </table>
     </div><!-- Age Section end -->
 
-    <!-- Update Time/ Print / PDF section Start -->
-    <div class="stats02">
-        <!--<a href="#" class="time">Sept 21  by Nelum</a>-->
-        <a href="#" class="facebook">PDF</a>
-        <a href="#" class="twitter">Print</a>
-    </div><!-- Update Time/ Print / PDF section End -->
+
 
 </div><!-- Race / Religion / Gender / Age  End	-->
 
@@ -269,12 +254,7 @@
         </div>
         <!-- Area Sections Tabs End -->
 
-        <!-- Update Time/ Print / PDF section Start -->
-        <div class="stats">
-            <!--<a href="#" class="time">Sept 21  by Nelum</a>-->
-            <a href="#" class="facebook">PDF</a>
-            <a href="#" class="twitter">Print</a>
-        </div><!-- Update Time/ Print / PDF section Start -->
+
     </div>
 </div>
 
