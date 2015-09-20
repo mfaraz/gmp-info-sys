@@ -1,0 +1,1 @@
+Area information management system with multilingual support.
